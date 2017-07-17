@@ -131,6 +131,7 @@ func tellTimeJob(sourceId string) {
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
+	/*
 	go func() {
 		tellTimeJob(user_zchien);
 	}()
@@ -142,7 +143,8 @@ func main() {
 			time.Sleep(time.Duration(rand.Int31n(29)) * time.Minute)
 		}
 	}()
-	
+	*/
+
 	var err error
 	bot, err = linebot.New(os.Getenv("ChannelSecret"), os.Getenv("ChannelAccessToken"))
 	log.Println("Bot:", bot, " err:", err)
